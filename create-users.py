@@ -5,7 +5,7 @@ import sys
 def main():
 	for line in sys.stdin:
 		match = line.split(':')
-		if re.search("^#", match):
+		if re.search("^#", match[0]):
 			print(match[0][1:6], "is skipped because it starts with a hashtag (is commented out)")
 		fields = line.strip().split(':')
 		if match or len(fields) != 5: #this checks if the match was found or there aren't 5 sperate parts in the user's list, then the continue causes the loop to go back to the beginning of the loop to continue checking for those errors in the beginning if statement
