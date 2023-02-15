@@ -28,7 +28,7 @@ def main():
 		os.system(cmd)
 		for group in groups: #this for loop is iterating though the groups at each group at a time
 			if group != '-':
-				print("==> Assigning %s to the %s group..." % (username,group)
+				print("==> Assigning %s to the %s group..." % (username,group))
 				cmd = "/usr/sbin/adduser %s %s" % (username,group)
 				#print cmd
 				os.system(cmd)
