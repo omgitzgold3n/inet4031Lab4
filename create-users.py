@@ -18,7 +18,7 @@ def main():
 	for line in sys.stdin:
 		match = line.split(':') #This will be used to split the line into parts --> an array called match
 		if re.search("^#", match[0]):
-			print(match[0][1:6], "is skipped because it starts with a hashtag (is commented out)") #This will print out the error message for the user with a # in the front
+			print(match[0][1:7], "is skipped because it starts with a hashtag (is commented out)") #This will print out the error message for the user with a # in the front
 		fields = line.strip().split(':')
 		if match or len(fields) != 5: #this checks if the match was found or there aren't 5 sperate parts in the user's list, then the continue causes the loop to go back to the beginning of the loop to continue checking for those errors in the beginning if statement
 			continue
